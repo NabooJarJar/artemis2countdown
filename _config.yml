@@ -1,0 +1,5 @@
+title: "ArtemisIIUnnoficallLaunchCountDown"
+description: "A site for countdown the Artmeis II launch!  "
+remote_theme: pages-themes/slate@v0.2.0  # Replace with the theme you want
+plugins:
+  - jekyll-remote-theme # Enables remote themes
