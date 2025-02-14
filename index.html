@@ -11,57 +11,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-black text-white relative overflow-hidden">
-    <main>
+    <main class="p-4">
         <!-- 🌌 Star Background -->
-    <div class="absolute inset-0 z-0" id="star-background"></div>
+        <div class="absolute inset-0 z-0" id="star-background"></div>
     
-    <!-- 🚀 Artemis II Mission Patch -->
-    <div class="absolute top-5 left-1/2 transform -translate-x-1/2 z-10">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Exploration_Mission-1_patch.png" alt="Artemis II Mission Patch" class="w-[200px] h-[200px]">
-    </div>
-
-    <!-- ⏳ Countdown Container -->
-    <div class="relative flex flex-col justify-center items-center min-h-screen z-10">
-        <h1 class="text-3xl font-bold mb-6">Artemis II Countdown</h1>
-        
-        <!-- Crew Members -->
-        <div class="rounded border-2  text-center flex flex-col p-2 shadow-sm  shadow-white mb-6">
-            <p class="text-lg">👨‍🚀 <strong>Reid Wiseman</strong> - Commander</p>
-            <p class="text-lg">👨‍🚀 <strong>Victor Glover</strong> - Pilot</p>
-            <p class="text-lg">👩‍🚀 <strong>Christina Koch</strong> - Mission Specialist</p>
-            <p class="text-lg">👨‍🚀 <strong>Jeremy Hansen</strong> - Mission Specialist</p>
+        <!-- 🚀 Artemis II Mission Patch -->
+        <div class="absolute top-5 left-1/2 transform -translate-x-1/2 z-10">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Exploration_Mission-1_patch.png" 
+                 alt="Artemis II Mission Patch" 
+                 class="w-32 sm:w-48">
         </div>
 
-        <!-- Countdown Display -->
-        <div class="grid grid-cols-4 gap-3 text-center">
-            <div class="p-4 bg-blue-500 text-white rounded-lg">
-                <span id="days" class="text-4xl font-bold">00</span>
-                <p class="text-sm mt-2">Days</p>
+        <!-- ⏳ Countdown Container -->
+        <div class="relative flex flex-col justify-center items-center min-h-screen z-10 text-center">
+            <h1 class="text-2xl sm:text-3xl font-bold mb-6">Artemis II Countdown</h1>
+            
+            <!-- Crew Members -->
+            <div class="rounded border-2 p-3 w-full max-w-md shadow-sm shadow-white mb-6 text-sm sm:text-lg">
+                <p>👨‍🚀 <strong>Reid Wiseman</strong> - Commander</p>
+                <p>👨‍🚀 <strong>Victor Glover</strong> - Pilot</p>
+                <p>👩‍🚀 <strong>Christina Koch</strong> - Mission Specialist</p>
+                <p>👨‍🚀 <strong>Jeremy Hansen</strong> - Mission Specialist</p>
             </div>
-            <div class="p-4 bg-red-500 text-white rounded-lg">
-                <span id="hours" class="text-4xl font-bold">00</span>
-                <p class="text-sm mt-2">Hours</p>
+
+            <!-- Countdown Display -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center w-full max-w-md">
+                <div class="p-4 bg-blue-500 text-white rounded-lg">
+                    <span id="days" class="text-4xl font-bold">00</span>
+                    <p class="text-sm mt-2">Days</p>
+                </div>
+                <div class="p-4 bg-red-500 text-white rounded-lg">
+                    <span id="hours" class="text-4xl font-bold">00</span>
+                    <p class="text-sm mt-2">Hours</p>
+                </div>
+                <div class="p-4 bg-green-500 text-white rounded-lg">
+                    <span id="minutes" class="text-4xl font-bold">00</span>
+                    <p class="text-sm mt-2">Minutes</p>
+                </div>
+                <div class="p-4 bg-yellow-500 text-black rounded-lg">
+                    <span id="seconds" class="text-4xl font-bold">00</span>
+                    <p class="text-sm mt-2">Seconds</p>
+                </div>
             </div>
-            <div class="p-4 bg-green-500 text-white rounded-lg">
-                <span id="minutes" class="text-4xl font-bold">00</span>
-                <p class="text-sm mt-2">Minutes</p>
-            </div>
-            <div class="p-4 bg-yellow-500 text-black rounded-lg">
-                <span id="seconds" class="text-4xl font-bold">00</span>
-                <p class="text-sm mt-2">Seconds</p>
+
+            <!-- Labels Section -->
+            <div class="flex flex-wrap justify-center gap-2 mt-5">
+                <div class="bg-red-500 px-3 py-2 rounded ">
+                    <p>Unofficial Countdown</p>
+                </div>
+                <div class="bg-red-800 px-3 py-2 rounded ">
+                    <p>Unconfirmed</p>
+                </div>
+                <div class="bg-green-500 px-3 py-2 rounded font-bold flex items-center">
+                    Views: <span class="bg-white text-black px-2 py-1 ml-2 rounded" id="counter">0</span>
+                </div>
             </div>
         </div>
-        <div class="flex ">
-            <div class="bg-red-500  mt-5 p-2 rounded ">
-                <p>Unofficial Countdown</p>
-            </div>
-            <div class="bg-red-800  mt-5 p-2 rounded ml-2 ">
-                <p>Uncofirmed</p>
-            </div>
-        </div>
-    </div>
     </main>
 
-    <script src="main.js"></script>
+   <script src="main.js"></script>
+
 </body>
 </html>
