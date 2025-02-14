@@ -1,3 +1,14 @@
+let count = localStorage.getItem('page_view');
+
+if (count === null) {
+    count = 0;
+} else {
+    count = parseInt(count)
+}
+
+count++;
+localStorage.setItem('page_view', count);
+document.getElementById('counter').textContent =  ` ${count} `
 document.addEventListener("DOMContentLoaded", function () {
     const launchDate = new Date("2025-11-10T17:47:00Z").getTime(); // Replace with actual launch time
 
@@ -69,3 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cubeContainer.appendChild(cube);
     }
 });
+
+
+ 
+
